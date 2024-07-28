@@ -26,17 +26,17 @@ struct LazySegmentTree {
         n = init_.size();
         info.assign(4 << __lg(n), Info());
         tag.assign(4 << __lg(n), Tag());
-        std::function<void(int, int, int)> build = [&](int p, int l, int r) {
+        auto build = [&](auto &&self, int p, int l, int r) -> void {
             if (r - l == 1) {
                 info[p] = init_[l];
                 return;
             }
             int m = (l + r) / 2;
-            build(2 * p, l, m);
-            build(2 * p + 1, m, r);
+            self(self, 2 * p, l, m);
+            self(self, 2 * p + 1, m, r);
             pull(p);
         };
-        build(1, 0, n);
+        build(build, 1, 0, n);
     }
     void pull(int p) {
         info[p] = info[2 * p] + info[2 * p + 1];
