@@ -37,56 +37,9 @@ typedef pair<int, i64> pil;
 typedef vector<vector<int> > vvi;
 const i64 mod = 1e9 + 7;
 const int maxn = 1e5 + 50;
-
-
+const i64 inf = 1e18;
 
 void solve() {
-    
-    int n, k;
-    cin >> n >> k;
-    
-    vector<i64> a(n + 1), b(n + 1);
-    for (int i = 1; i <= n; i++) {
-        cin >> a[i];
-    }
-    for (int i = 1; i <= n; i++) {
-        cin >> b[i];
-    }
-    i64 l = 1, r = 1e9, target = 1;
-    while (l <= r) {
-        i64 mid = (l + r) / 2;
-        i64 cnt = 0;
-        for (int i = 1; i <= n; i++) {
-            if (a[i] >= mid) {
-                cnt += (a[i] - mid) / b[i] + 1;
-            }
-        }
-        if (cnt >= k) {
-            target = mid;
-            l = mid + 1;
-        } else {
-            r = mid - 1;
-        }
-    }
-    debug(l);
-    debug(r);
-    debug(target);
-    i64 ans = 0, remain = 0;
-    for (int i = 1; i <= n; i++) {
-        if (a[i] >= target) {
-            i64 cnt = (a[i] - target) / b[i] + 1;
-            debug(make_pair(i, cnt));
-            remain += cnt;
-            i64 tmp = a[i] * cnt + (cnt - 1) * cnt / 2LL * (- b[i]);
-            debug(make_pair(i, tmp));
-            ans += tmp;
-        }
-    }
-    debug(remain);
-    debug(k);
-    ans -= (max(0LL, remain - k)) * target;
-    cout << ans << endl;
-    
     
     
 }

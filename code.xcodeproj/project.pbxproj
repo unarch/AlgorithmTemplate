@@ -50,6 +50,8 @@
 		2A33B3EA2BC43577002B6DFD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2A33B3F32BCAF9DE002B6DFD /* codeforces-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "codeforces-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A33B3F52BCAF9DE002B6DFD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2A4B80C42C628FD100749354 /* Mint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mint.h; sourceTree = "<group>"; };
+		2A4B80C62C62901400749354 /* Comb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comb.h; sourceTree = "<group>"; };
 		2A6813E92C4BF7E600EF8B2F /* DSU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSU.h; sourceTree = "<group>"; };
 		2A6813EA2C4BF81400EF8B2F /* bits:stdc++.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bits:stdc++.h"; sourceTree = "<group>"; };
 		2A6813EB2C4BF9F900EF8B2F /* Fenwick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fenwick.h; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		2A2DB6042C458C7000FE7559 /* algo */ = {
 			isa = PBXGroup;
 			children = (
+				2A4B80C52C62900B00749354 /* Math */,
 				2A6813F62C4C012200EF8B2F /* Misc */,
 				2A6813EF2C4BFE3A00EF8B2F /* DataStructure */,
 				2A6813ED2C4BFD6F00EF8B2F /* String */,
@@ -126,6 +129,14 @@
 			path = "codeforces-C";
 			sourceTree = "<group>";
 		};
+		2A4B80C52C62900B00749354 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				2A4B80C62C62901400749354 /* Comb.h */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
 		2A6813ED2C4BFD6F00EF8B2F /* String */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +156,7 @@
 				2A6813EB2C4BF9F900EF8B2F /* Fenwick.h */,
 				2A6813F42C4BFF9D00EF8B2F /* LazySegmentTree.h */,
 				2A6813F52C4C001D00EF8B2F /* BigInt.h */,
+				2A4B80C42C628FD100749354 /* Mint.h */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";

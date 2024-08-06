@@ -34,10 +34,11 @@ using u64 = unsigned long long;
 typedef pair<int,int> pii;
 typedef pair<i64, i64> pll;
 typedef pair<int, i64> pil;
+typedef pair<i64, int> pli;
 typedef vector<vector<int> > vvi;
-const i64 mod = 998244353;
+const i64 mod = 1e9 + 7;
 const int maxn = 1e5 + 50;
-
+const i64 inf = 1e16;
 
 void solve() {
     
@@ -49,10 +50,10 @@ int main(int argc, const char * argv[]) {
     freopen("output.txt","w",stdout);
 #endif
     int Time=(int)clock();
-    ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+//    ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
     int t = 1;
-//    cin >> t;
+    cin >> t;
     
     while (t--) {
         solve();
