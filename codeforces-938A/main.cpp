@@ -37,12 +37,49 @@ typedef pair<int, i64> pil;
 typedef pair<i64, int> pli;
 typedef vector<vector<int> > vvi;
 const i64 mod = 1e9 + 7;
-const int maxn = 1e5 + 50;
-const i64 inf = 1e16;
-
-
+const int maxn = 1e6 + 50;
+const int inf = 1e8;
 
 void solve() {
+    
+    int n, m;
+    cin >> n >> m;
+    int t1, t2, t0;
+    cin >> t0 >> t1 >> t2;
+    
+    vector<vector<array<int, 3>>> G(n);
+    for (int i = 0; i < m; i++) {
+        int u, v, l1, l2;
+        cin >> u >> v >> l1 >> l2;
+        u--;
+        v--;
+        G[u].push_back({v, l1, l2});
+        G[v].push_back({u, l1, l2});
+    }
+    priority_queue<pair<int, int>> pq;
+    pq.push({t0, n - 1});
+    vector<int> dp(n, -1);
+    
+    while (!pq.empty()) {
+        auto [t, u] = pq.top();
+        pq.pop();
+        if (dp[u] != -1) {
+            continue;
+        }
+        dp[u] = t;
+        debug(G[u]);
+        for (auto [v, l1, l2] : G[u]) {
+            int next = -1;
+            next = max(next, t - l2);
+            if (t - l1 >= t2) {
+                next = max(next, t - l1);
+            }
+            next = max(next, min(t, t1) - l1);
+            pq.push({next, v});
+        }
+    }
+    
+    cout << dp[0] << endl;
     
 }
 

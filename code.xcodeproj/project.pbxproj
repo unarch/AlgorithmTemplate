@@ -52,6 +52,7 @@
 		2A33B3F52BCAF9DE002B6DFD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2A4B80C42C628FD100749354 /* Mint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mint.h; sourceTree = "<group>"; };
 		2A4B80C62C62901400749354 /* Comb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comb.h; sourceTree = "<group>"; };
+		2A4B80C72C6D03EC00749354 /* SegmentTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentTree.h; sourceTree = "<group>"; };
 		2A6813E92C4BF7E600EF8B2F /* DSU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSU.h; sourceTree = "<group>"; };
 		2A6813EA2C4BF81400EF8B2F /* bits:stdc++.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bits:stdc++.h"; sourceTree = "<group>"; };
 		2A6813EB2C4BF9F900EF8B2F /* Fenwick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fenwick.h; sourceTree = "<group>"; };
@@ -157,6 +158,7 @@
 				2A6813F42C4BFF9D00EF8B2F /* LazySegmentTree.h */,
 				2A6813F52C4C001D00EF8B2F /* BigInt.h */,
 				2A4B80C42C628FD100749354 /* Mint.h */,
+				2A4B80C72C6D03EC00749354 /* SegmentTree.h */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
