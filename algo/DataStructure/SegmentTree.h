@@ -13,21 +13,27 @@ struct SegmentTree {
     void init(int n_, Info v_ = Info()) {
         init(std::vector(n_, v_));
     }
+    int __lg(int __n) {
+        int __k = 0;
+        for (__k = 0; __n != 0; __n >>= 1) ++__k;
+        return __k - 1;
+    }
+    
     template<class T>
     void init(std::vector<T> init_) {
         n = init_.size();
-        info.assign(4 << std::__lg(n), Info());
-        std::function<void(int, int, int)> build = [&](int p, int l, int r) {
+        info.assign(4 << __lg(n), Info());
+        auto build = [&](auto &&self, int p, int l, int r) -> void {
             if (r - l == 1) {
                 info[p] = init_[l];
                 return;
             }
             int m = (l + r) / 2;
-            build(2 * p, l, m);
-            build(2 * p + 1, m, r);
+            self(self, 2 * p, l, m);
+            self(self, 2 * p + 1, m, r);
             pull(p);
         };
-        build(1, 0, n);
+        build(build, 1, 0, n);
     }
     void pull(int p) {
         info[p] = info[2 * p] + info[2 * p + 1];
